@@ -17,6 +17,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     if (!glview) {
         glview = GLViewImpl::create("CSF211 Course Project");
         glview->setFrameSize(640, 480);
+        glview->setDesignResolutionSize(640, 480, ResolutionPolicy::EXACT_FIT);
         director->setOpenGLView(glview);
     }
 
