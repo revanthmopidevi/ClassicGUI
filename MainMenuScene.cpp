@@ -41,13 +41,14 @@ bool MainMenu::init()
     auto menu_item_3 = MenuItemFont::create("TicTacToe", CC_CALLBACK_1(MainMenu::TicTacToe, this));
     auto menu_item_4 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(MainMenu::exit, this));
     // Set Menu Items Position
-    menu_item_1->setPosition(Point(origin.x + size.width / 2, origin.y + (size.height / 5) * 4));
-    menu_item_2->setPosition(Point(origin.x + size.width / 2, origin.y + (size.height / 5) * 3));
-    menu_item_3->setPosition(Point(origin.x + size.width / 2, origin.y + (size.height / 5) * 2));
-    menu_item_4->setPosition(Point(origin.x + size.width / 2, origin.y + (size.height / 5) * 1));
+    //menu_item_1->setPosition(Point(origin.x + size.width / 2, origin.y + (size.height / 5) * 4));
+    //menu_item_2->setPosition(Point(origin.x + size.width / 2, origin.y + (size.height / 5) * 3));
+    //menu_item_3->setPosition(Point(origin.x + size.width / 2, origin.y + (size.height / 5) * 2));
+    //menu_item_4->setPosition(Point(origin.x + size.width / 2, origin.y + (size.height / 5) * 1));
 
     auto *menu = Menu::create(menu_item_1, menu_item_2, menu_item_3, menu_item_4, NULL);
-    menu->setPosition(Point(0, 0));
+    //menu->setPosition(Point(0, 0));
+    menu->alignItemsVertically();
     this->addChild(menu);
 
 
