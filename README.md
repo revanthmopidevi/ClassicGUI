@@ -5,3 +5,4 @@
       sudo apt-get install gtk2.0 <br>
       sudo apt-get install build-essential libgtk2.0-dev
  <hr>
+ 2. Snake: Classsic Snake game enabled by conio.h for console input/output.
