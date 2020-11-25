@@ -6,6 +6,15 @@ using namespace std;
 
 class Snake {
 public:
+    Snake() {
+        Setup();
+        while (!gameOver) {   
+            Draw();
+            Input();
+            Logic();
+            Sleep(10); //sleep(10);
+        }
+    }
     void Setup() {
         this->gameOver = false;
         dir = STOP;
@@ -22,23 +31,18 @@ public:
             cout << "#";
         cout << endl;
  
-        for (int i = 0; i < height; i++)
-        {
-            for (int j = 0; j < width; j++)
-            {
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
                 if (j == 0)
                     cout << "#";
                 if (i == y && j == x)
                     cout << "O";
                 else if (i == fruitY && j == fruitX)
                     cout << "F";
-                else
-                {
+                else {
                     bool print = false;
-                    for (int k = 0; k < nTail; k++)
-                    {
-                        if (tailX[k] == j && tailY[k] == i)
-                        {
+                    for (int k = 0; k < nTail; k++) {
+                        if (tailX[k] == j && tailY[k] == i) {
                             cout << "o";
                             print = true;
                         }
@@ -88,8 +92,7 @@ public:
         int prev2X, prev2Y;
         tailX[0] = x;
         tailY[0] = y;
-        for (int i = 1; i < nTail; i++)
-        {
+        for (int i = 1; i < nTail; i++) {
             prev2X = tailX[i];
             prev2Y = tailY[i];
             tailX[i] = prevX;
@@ -97,8 +100,7 @@ public:
             prevX = prev2X;
             prevY = prev2Y;
         }
-        switch (dir)
-        {
+        switch (dir) {
             case LEFT:
                 x--;
                 break;
@@ -131,9 +133,10 @@ public:
         }
     }
 
-    bool gameOver;
+    
 
 private:
+    bool gameOver;
     const int width = 20;
     const int height = 20;
     int x, y, fruitX, fruitY, score;
@@ -147,13 +150,5 @@ private:
 int main()
 {
     Snake game;
-    game.Setup();
-    while (!game.gameOver)
-    {
-        game.Draw();
-        game.Input();
-        game.Logic();
-        game.Sleep(10); //sleep(10);
-    }
     return 0;
 }
