@@ -139,7 +139,7 @@ public:
     int nTail;
     enum eDirecton { STOP = 0, LEFT, RIGHT, UP, DOWN};
     eDirecton dir;
-}
+};
 
 
 int main()
