@@ -132,7 +132,7 @@ public:
     }
 
     bool gameOver;
-    
+
 private:
     const int width = 20;
     const int height = 20;
@@ -147,7 +147,7 @@ private:
 int main()
 {
     Snake game;
-    Setup();
+    game.Setup();
     while (!game.gameOver)
     {
         game.Draw();
