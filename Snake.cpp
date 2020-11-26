@@ -3,26 +3,27 @@
 #include <windows.h>
 using namespace std;
 bool gameOver;
-const int width = 20;
+const int width = 20;// creating area of map
 const int height = 20;
 int x, y, fruitX, fruitY, score;
 int tailX[100], tailY[100];
 int nTail;
-enum eDirecton { STOP = 0, LEFT, RIGHT, UP, DOWN};
+enum eDirecton { STOP = 0, LEFT, RIGHT, UP, DOWN}; //to change the direction of snake 
 eDirecton dir;
 void Setup()
 {
     gameOver = false;
     dir = STOP;
-    x = width / 2;
+    x = width / 2; // to place the snake in middle 
     y = height / 2;
-    fruitX = rand() % width;
+    fruitX = rand() % width; // to place the fruit randomly
     fruitY = rand() % height;
     score = 0;
 }
 void Draw()
 {
-    system("cls"); //system("clear");
+    system("cls"); //system("clear"); // to clear the screen 
+    //code to print map
     for (int i = 0; i < width+2; i++)
         cout << "#";
     cout << endl;
