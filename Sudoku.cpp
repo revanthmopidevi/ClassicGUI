@@ -9,8 +9,6 @@
 #include <gtk/gtk.h>    // using gtk oepn-source and free widget toolking for GUI
 #include <iostream>
 #include <fstream>
-#include <cmath>
-#include <cstring>
 
 using namespace std;
 
