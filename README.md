@@ -5,5 +5,7 @@
       sudo apt-get install gtk2.0 <br>
       sudo apt-get install build-essential libgtk2.0-dev
 
-2. Snake: Classsic Snake game enabled by conio.h for console input/output.
-3. Hangman:
+2. TicTacToe: Classic GUI TicTacToe in Python using PyGame library.
+3. Snake: Classsic Snake game enabled by conio.h for console input/output.
+4. Hangman: Command Line program in Python.
+
